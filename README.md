@@ -1,5 +1,5 @@
 # Configurablecheckout
-Configure Onepage Checkout Steps.
+Configure Magento Onepage Checkout Steps!!
 
 ## Features
 ### Disabling steps
