@@ -1,0 +1,16 @@
+<?php $quote = Mage::getModel('checkout/cart')->getQuote(); ?>
+<a href="#" onclick="checkout.popupLoginWindow('<?php echo Mage::getUrl('configurablecheckout/index/login/form_key/' . Mage::getSingleton('core/session')->getFormKey()
+    , array('_secure'=>true)) ?>'); return false;" id="toggle_login"><?php echo $this->__('Click here to login.') ?></a>
+<ul class="configurablecheckout_select">
+    <li class="control">
+        <input type="radio" name="checkout_method" id="login:guest"
+               value="guest"<?php if ($quote->getCheckoutMethod() == Mage_Checkout_Model_Type_Onepage::METHOD_GUEST): ?> checked="checked"<?php endif; ?>
+               class="radio"
+               onclick="checkout.togglePassword();"/><label for="login:guest"><?php echo $this->__('Checkout as Guest') ?></label>
+    </li>
+    <li class="control">
+        <input type="radio" name="checkout_method" id="login:register"
+               value="register"<?php if ($quote->getCheckoutMethod() == Mage_Checkout_Model_Type_Onepage::METHOD_REGISTER || !$quote->isAllowedGuestCheckout()): ?> checked="checked"<?php endif ?>
+               class="radio" onclick="checkout.togglePassword();"/><label for="login:register"><?php echo $this->__('Register') ?></label>
+    </li>
+</ul>
