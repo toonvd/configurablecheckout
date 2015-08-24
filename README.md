@@ -42,3 +42,5 @@ Mixed checkout. (Register radio button on billing and login popup.)
 
 ## Other
 Persistent checkout
+
+#This extension is being developed in Magento 1.9.1 later versions will be tested after, backwards compatibility is the final stage
