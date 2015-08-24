@@ -1,5 +1,5 @@
-# configurablecheckout
-Creates a configurable onepage checkout.
+# Configurablecheckout
+Configure Onepage Checkout Steps.
 
 ## Features
 ### Disabling steps
